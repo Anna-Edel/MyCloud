@@ -1,5 +1,4 @@
 """
-
 Создано с использованием Django 5.1.6.
 
 Настройки Django для проекта MyCloud.
@@ -24,6 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Загрузка переменных окружения из файла .env
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+# Проверка значений переменных окружения
+print(f"SECRET_KEY: {env('SECRET_KEY')}")
+print(f"DEBUG: {env('DEBUG')}")
+print(f"ALLOWED_HOSTS: {env.list('ALLOWED_HOSTS')}")
+
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
@@ -38,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'MYCloud_app',
+    'cloud',
     'corsheaders',
 ]
 
@@ -59,7 +64,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ]
 
-ROOT_URLCONF = 'my_cloud.urls'
+ROOT_URLCONF = 'mycloud.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'my_cloud.wsgi.application'
+WSGI_APPLICATION = 'mycloud.wsgi.application'
 
 # Настройки базы данных
 DATABASES = {
@@ -90,6 +95,8 @@ DATABASES = {
         'PORT': env.int('DB_PORT'),
     }
 }
+
+AUTH_USER_MODEL = 'cloud.CloudUser'
 
 # Валидация паролей
 AUTH_PASSWORD_VALIDATORS = [
@@ -123,7 +130,6 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'default': {'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'},
-
         'django.server': DEFAULT_LOGGING['formatters']['django.server'],
     },
     'handlers': {
@@ -133,5 +139,3 @@ LOGGING = {
         'my_cloud_api': {'handlers': ['console'], 'level': 'INFO'},
     },
 }
-
-
