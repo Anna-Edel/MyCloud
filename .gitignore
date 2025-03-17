@@ -85,3 +85,18 @@ dmypy.json
 
 # VS Code
 .vscode/
+
+# Игнорировать файл конфигурации
+my_cloud_app/app_config.properties
+
+# Игнорировать виртуальное окружение
+venv/
+
+# Игнорировать файлы базы данных SQLite
+db.sqlite3
+
+# Игнорировать файлы миграций
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/*.pyd
+**/migrations/__pycache__/
