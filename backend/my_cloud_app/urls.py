@@ -1,5 +1,5 @@
-from django.urls import path
-from my_cloud_app.views import login_user, logout_user, register_user, list_users, delete_user, get_list_files, \
+from django.urls import path, include
+from .views import login_user, logout_user, register_user, list_users, delete_user, get_list_files, \
     delete_file, get_list_files_admin, upload_file, rename_file, edit_description_file, download_file, \
     download_file_from_link, creating_link_to_the_file, edit_user
 
@@ -19,5 +19,5 @@ urlpatterns = [
     path('download_file/', download_file),
     path('public/download_file/', download_file_from_link),
     path('creating_link_to_the_file/', creating_link_to_the_file),
-    path('public/download_file_from_link/', download_file_from_link)
+    path('public/download_file_from_link/', download_file_from_link),
 ]

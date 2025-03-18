@@ -36,3 +36,6 @@ db.sqlite3
 **/migrations/*.pyo
 **/migrations/*.pyd
 **/migrations/__pycache__/
+
+# Ignore PyCharm project settings
+.idea/
