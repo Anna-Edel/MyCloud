@@ -1,14 +1,56 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+# Backup files #
+*.bak
+
+# If you are using PyCharm #
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# AWS User-specific
+.idea/**/aws.xml
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Python #
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
-
 # Distribution / packaging
-.Python
-build/
+.Python build/
 develop-eggs/
 dist/
 downloads/
@@ -23,34 +65,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Django stuff:
-*.log
-*.pot
-*.pyc
-*.pyo
-*.db
-*.sqlite3
-
-# Django migrations
-*/migrations/*
-__pycache__/
-*.py[cod]
-
-# If you are using env
-.env
-
-# Если вы используете virtualenv
-venv/
-env/
-ENV/
-.venv/
-.env/
-
-# Если вы используете pyenv
-.python-version
-
-# PyInstaller
 *.manifest
 *.spec
 
@@ -61,45 +75,69 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
-.nox/
 .coverage
 .coverage.*
 .cache
+.pytest_cache/
 nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
 
-# Translations
-*.mo
+# Jupyter Notebook
+.ipynb_checkpoints
 
-# mr.developer
-.mr.developer.cfg
-.project
-.pydevproject
+# pyenv
+.python-version
+
+# celery
+celerybeat-schedule.*
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+env
+
+# mkdocs documentation
+/site
 
 # mypy
 .mypy_cache/
-.dmypy.json
-dmypy.json
 
-# VS Code
-.vscode/
+# Sublime Text #
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
 
-# Игнорировать файл конфигурации
-my_cloud_app/app_config.properties
+# sftp configuration file
+sftp-config.json
 
-# Игнорировать виртуальное окружение
-venv/
+# Package control specific files Package
+Control.last-run
+Control.ca-list
+Control.ca-bundle
+Control.system-ca-bundle
+GitHub.sublime-settings
 
-# Игнорировать файлы базы данных SQLite
-db.sqlite3
+# Visual Studio Code #
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
 
-# Игнорировать файлы миграций
-**/migrations/*.pyc
-**/migrations/*.pyo
-**/migrations/*.pyd
-**/migrations/__pycache__/
-
-# Ignore PyCharm project settings
+# idea
 .idea/
+
+storage/
